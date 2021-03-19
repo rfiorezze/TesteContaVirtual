@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiContaVirtual</name>
+    </assembly>
+    <members>
+        <member name="M:ApiContaVirtual.Controllers.ContasController.GetConta(System.Int32)">
+            <summary>
+            Listar Conta Virtual
+            </summary>
+            <remarks>
+            Lista dados da conta virtual do cliente
+            </remarks>
+            <returns>Este método retorna dados de uma conta virtual de um cliente específico</returns>
+            <response code="400">Retorno caso ocorra algum erro</response>     
+        </member>
+        <member name="M:ApiContaVirtual.Controllers.ContasController.GetConta">
+            <summary>
+            Listar Contas Virtuais
+            </summary>
+            <remarks>
+            Lista dados das contas virtuais dos clientes
+            </remarks>
+            <returns>Este método retorna dados de contas virtuais</returns>
+            <response code="400">Retorno caso ocorra algum erro</response>   
+        </member>
+        <member name="M:ApiContaVirtual.Controllers.ContasController.PostConta(ApiContaVirtual.Data.Conta)">
+             <summary>
+             Incluir Conta Virtual
+             </summary>
+             <remarks>
+             Inclui conta virtual no banco de dados
+             Sample request:
+            
+                 POST / Conta
+                 {
+                    "nomeCliente": "Renato",
+                    "saldo": 0
+                 }
+            
+             </remarks>
+             <returns>Este método retorna o identiicador da conta criado</returns>
+             <response code="400">Retorno caso ocorra algum erro</response>            
+        </member>
+        <member name="M:ApiContaVirtual.Controllers.MovimentacoesController.ListarExtrato(System.Int32,System.Int32,System.String,System.String)">
+            <summary>
+            Listar Extrato
+            </summary>
+            <remarks>
+            Este método lista o extrato de uma determinada conta virtual
+            - Por período
+            - Por tipo de transação | Ex: 1- Crédito ou 2- débito
+            Exemplo: 1- Crédito | 2- Débito
+            </remarks>
+            <returns>Este método retorna os dados de todas as movimentações realizadas em um determinado período.</returns>
+            <response code="400">Retorno caso ocorra algum erro</response>
+        </member>
+        <member name="M:ApiContaVirtual.Controllers.MovimentacoesController.IncluirMovimentacao(ApiContaVirtual.Data.Movimentacao)">
+             <summary>
+             Incluir Movimentação
+             </summary>
+             <remarks>
+             Inclui Movimentação na conta virtual 
+             Exemplo: 1- Crédito | 2- Débito
+             Sample request:
+            
+                 POST / Movimentacao
+                 {
+                    "idConta": 1,
+                    "idTipoMovimentacao": 1,
+                    "valor": 2000,
+                    "descricao": "Salário mês de março",
+                    "dataMovimentacao": "2021-03-18"
+                 }
+            
+             </remarks>
+             <returns>Este método retorna os dados de movimentação na conta que foram incluídos</returns>
+             <response code="400">Retorno caso ocorra algum erro</response>
+        </member>
+        <member name="M:ApiContaVirtual.Controllers.TipoMovimentacaosController.GetTipoMovimentacao">
+            <summary>
+            Listar Tipo Movimentação
+            </summary>
+            <remarks>
+            Este método lista os tipos de movimentação
+            Exemplo: 1- Crédito | 2- Débito
+            </remarks>
+            <returns>Este método retorna os tipos de movimentação cadastrados.</returns>
+            <response code="400">Retorno caso ocorra algum erro</response>
+        </member>
+        <member name="P:ApiContaVirtual.Data.Conta.IdConta">
+            <summary>
+            Identificador do Conta
+            </summary>
+        </member>
+        <member name="P:ApiContaVirtual.Data.Conta.NomeCliente">
+            <summary>
+            Nome do Cliente da Conta
+            </summary>
+        </member>
+        <member name="P:ApiContaVirtual.Data.Conta.Saldo">
+            <summary>
+            Saldo da Conta
+            </summary>
+        </member>
+        <member name="P:ApiContaVirtual.Data.Movimentacao.IdMovimentacao">
+            <summary>
+            Identificador da Movimentacao
+            </summary>
+        </member>
+        <member name="P:ApiContaVirtual.Data.Movimentacao.IdConta">
+            <summary>
+            Identificador da Conta
+            </summary>
+        </member>
+        <member name="P:ApiContaVirtual.Data.Movimentacao.IdTipoMovimentacao">
+            <summary>
+            Identificador do Tipo de Movimentacao
+            </summary> 
+        </member>
+        <member name="P:ApiContaVirtual.Data.Movimentacao.Valor">
+            <summary>
+            Valor de movimentação
+            </summary> 
+        </member>
+        <member name="P:ApiContaVirtual.Data.Movimentacao.SaldoAnterior">
+            <summary>
+            Saldo atual da conta corrente antes da movimentacao
+            </summary> 
+        </member>
+        <member name="P:ApiContaVirtual.Data.Movimentacao.SaldoPosterior">
+            <summary>
+            Saldo da conta corrente depois da movimentacao
+            </summary> 
+        </member>
+        <member name="P:ApiContaVirtual.Data.Movimentacao.Descricao">
+            <summary>
+            Descricao da Movimentacao
+            </summary>
+        </member>
+        <member name="P:ApiContaVirtual.Data.Movimentacao.DataMovimentacao">
+            <summary>
+            Data da Movimentacao
+            </summary>
+        </member>
+        <member name="P:ApiContaVirtual.Data.TipoMovimentacao.IdTipoMovimentacao">
+            <summary>
+            Identificador do Conta
+            </summary>
+        </member>
+        <member name="P:ApiContaVirtual.Data.TipoMovimentacao.Descricao">
+            <summary>
+            Descricao do Tipo de Movimentacao
+            </summary>
+        </member>
+        <member name="P:ApiContaVirtual.Models.MovimentacaoConta.IdMovimentacao">
+            <summary>
+            Identificador da Movimentacao
+            </summary>
+        </member>
+        <member name="P:ApiContaVirtual.Models.MovimentacaoConta.IdConta">
+            <summary>
+            Identificador da Conta
+            </summary>
+        </member>
+        <member name="P:ApiContaVirtual.Models.MovimentacaoConta.TipoMovimentacao">
+            <summary>
+            Identificador do Tipo de Movimentacao
+            </summary> 
+        </member>
+        <member name="P:ApiContaVirtual.Models.MovimentacaoConta.Valor">
+            <summary>
+            Valor de movimentação
+            </summary> 
+        </member>
+        <member name="P:ApiContaVirtual.Models.MovimentacaoConta.SaldoAnterior">
+            <summary>
+            Saldo atual da conta corrente antes da movimentacao
+            </summary> 
+        </member>
+        <member name="P:ApiContaVirtual.Models.MovimentacaoConta.SaldoPosterior">
+            <summary>
+            Saldo da conta corrente depois da movimentacao
+            </summary> 
+        </member>
+        <member name="P:ApiContaVirtual.Models.MovimentacaoConta.Descricao">
+            <summary>
+            Descricao da Movimentacao
+            </summary>
+        </member>
+        <member name="P:ApiContaVirtual.Models.MovimentacaoConta.DataMovimentacao">
+            <summary>
+            Data da Movimentacao
+            </summary>
+        </member>
+    </members>
+</doc>

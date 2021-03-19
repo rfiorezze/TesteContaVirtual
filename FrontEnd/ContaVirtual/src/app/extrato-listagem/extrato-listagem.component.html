@@ -1,0 +1,46 @@
+<p><b>Nome do Cliente: </b>{{dadosConta.nomeCliente}}</p>
+<p><b>Saldo Atual: </b>{{dadosConta.saldo}}</p>
+<br>
+
+<form>
+    <label for="lbDataIni">Data Inicial:</label><br>
+    <input type="date" id="dataIni" name="dataIni" [(ngModel)]='dataIni' [ngModelOptions]="{standalone: true}"><br><br>
+    <label for="lbDataIni">Data Final:</label><br>
+    <input type="date" id="dataFim" name="dataFim" [(ngModel)]='dataFim' [ngModelOptions]="{standalone: true}"><br><br>
+    <label for="lbTipoMov">Tipo Movimentação:</label><br>
+    <select id="lbTipoMov" [(ngModel)]='selectedMov' [ngModelOptions]="{standalone: true}">
+        <option value="0">Todas</option>
+        <option *ngFor="let mov of tipoMov" [ngValue]='mov.idTipoMovimentacao'>{{mov.descricao}}</option>
+    </select><br>
+    <br>
+    <input type="button" (click)='listarExtrato(1,selectedMov,dataIni,dataFim)' value="Listar Extrato">
+</form> 
+
+<h2>Extrato da Conta</h2>
+
+<table style="border: 1px solid black;">
+
+    <tr >
+        <th>Tipo</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Data</th>
+        <th>Saldo Anterior</th>
+    </tr>
+
+    <tr style="text-align: center;" *ngFor="let extrato of extratoConta" >
+        <td>{{extrato.tipoMovimentacao.descricao}}</td>
+        <td>{{extrato.descricao}}</td>
+        <td>{{extrato.valor}}</td>
+        <td>{{extrato.dataMovimentacao}}</td>
+        <td>{{extrato.saldoAnterior}}</td>
+        <hr />
+    </tr>
+</table>
+
+<p><b>Saldo posterior: </b>{{saldoFinal}}</p>
+
+
+
+
+
