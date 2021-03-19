@@ -6,13 +6,13 @@ No repositório acima encontra-se um projeto de gerencia contas virtuais de um d
 
 <b>Como executar:</b>
 
-- Abra o projeto da api que se encontra na pasta: BackEnd\ApiContaVirtual
+- Abra o projeto da api que se encontra na pasta: BackEnd\ApiContaVirtual.
 
-- Va até o arquivo appsettings.json que se encontra na pasta raiz do projeto
+- Va até o arquivo appsettings.json que se encontra na pasta raiz do projeto.
 
-- Coloque sua string de conexão (SQL SERVER)
+- Coloque sua string de conexão (SQL SERVER).
 
-- Vá até o Package Manager Console e execute o comando do Entity Framework: Upadte-Database
+- Vá até o Package Manager Console e execute o comando do Entity Framework: Upadte-Database.
 
 - Por padrão, mandei o EF incluir uma conta e 2 tipos de movimentação: 1: Crédito e 2: Débito.
 
@@ -22,16 +22,16 @@ No repositório acima encontra-se um projeto de gerencia contas virtuais de um d
 
 - Pronto, agora é só testar.
 
-<b>Obsservações:</b> Lembrando que é necessário incluir algumas movimentações financeiras na conta testada para conseguir
+<b>Obsservações:</b> Lembrando que é necessário incluir algumas movimentações financeiras na conta testada para conseguir.
 listar o extrato.
 
 - Para incluir as movimentações acesse a documentação da Api pelo Swagger que lá possui o JSON Exemplo para o método.
 
-<b>Algumas dificuldades:</b> Tive que habilitar o CORS na minha API, pois quando o Front chamava a API de um diferente endereço, dava erro no TypeScript 
+<b>Algumas dificuldades:</b> Tive que habilitar o CORS na minha API, pois quando o Front chamava a API de um diferente endereço, dava erro no TypeScript.
 
 <b>Funções implementadas:</b>
 
-BackEnd (ASPNET CORE 3.1)
+<b>BackEnd (ASPNET CORE 3.1)</b>
 
 - Documentação de toda API no SWAGGER
 - Incluir Conta virtual
@@ -42,7 +42,7 @@ BackEnd (ASPNET CORE 3.1)
 - Incluir Tipo Movimentação
 
 
-Front End (ANGULAR v11.2.6)
+<b>Front End (ANGULAR v11.2.6)</b>
 
 - Listar Extrato
 - Listar Tipo Movimentação (Campo da tela)
