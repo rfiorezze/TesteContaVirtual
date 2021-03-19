@@ -18,7 +18,7 @@ No repositório acima encontra-se um projeto de gerencia contas virtuais de um d
 
 <b>Observações: </b> A api permite cadastrar outras contas e outros tipos de movimentação além desses.
 
-- Abra o projeto da api que se encontra na pasta: FrontEnd\ContaVirtual e execute o comando npm start
+- Abra o projeto da api que se encontra na pasta: FrontEnd\ContaVirtual e execute os comandos: npm install e npm start, na sequência.
 
 - Pronto, agora é só testar.
 
