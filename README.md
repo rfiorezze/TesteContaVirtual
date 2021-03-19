@@ -47,7 +47,3 @@ Front End (ANGULAR v11.2.6)
 - Listar Extrato
 - Listar Tipo Movimentação (Campo da tela)
 - Listar Extrato por período e por Tipo de movimentação
-
-
-# TesteContaVirtual
-
